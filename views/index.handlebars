@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <h1 class="display-4 titulo-blog" style="color: #ffffff; background-color: #3482db; padding: 10px;">Bem vindo ao Blog do NodeJS</h1>
+  <p class="lead">Esse é o meu primeiro sistema usando e trabalhando com o NodeJS depois de mais de 20 anos parado sem programar.</p>
+  <hr class="my-4">
+  <p>Comecei a estudar assistindo as aulas do Curso de NodeJS do PROF. Victor Lima, um curso que tem mais de 4 anos e ainda continua atualizado.</p>
+  <div class="card mt-4">
+    <div class="card-body">
+      <h5>Curso NodeJS do Victor Lima</h5>
+      <a href="https://www.youtube.com/playlist?list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B" target="_blank">Link para a Playlist</a>
+    </div>
+  </div>
+</div>
+
+<h2 class="mt-4">Postagens recentes</h2>
+
+{{#each postagens}}
+  <div class="card mt-4">
+    <div class="card-body">
+      <h3>{{titulo}}</h3>
+      <p>{{descricao}}</p>
+      <a href="/postagem/{{slug}}" class="btn btn-info">Leia mais...</a>
+      <hr>
+      <small>Categoria: {{categoria.nome}}</small>
+      <small>Data de publicação: {{data}}</small>
+    </div>
+  </div>
+{{else}}
+  <h4>Nenhuma postagem</h4>
+{{/each}}
