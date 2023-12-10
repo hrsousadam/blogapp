@@ -36,7 +36,7 @@ const db = require('./config/db')
     next()
   })
 // bodyParser
-  app.use(bodyParser.urlencoded({ extended: true }))
+  app.use(bodyParser.urlencoded({ extended: false }))
   app.use(bodyParser.json())
 // handlebars
 const hbs = exphbs.create({
