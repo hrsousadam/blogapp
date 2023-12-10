@@ -1,15 +1,8 @@
 {
   "name": "blogapp",
   "version": "1.0.0",
+  "description": "Projeto para aprender a ferramenta Node",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
@@ -19,5 +12,21 @@
     "mongoose": "^8.0.3",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrsousadam/blogapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevSoares/Node_BlogApp/issues"
+  },
+  "homepage": "https://github.com/hrsousadam/blogapp#readme",
+  "keywords": []
 }
