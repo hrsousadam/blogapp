@@ -55,12 +55,10 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 // mongoose
   mongoose.Promise = global.Promise
-  mongoose.connect(db.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
+  mongoose.connect(db.mongoURI).then(() => {
     console.log('Conectado ao MongoDB')
-  })
-  .catch((err) => {
-    console.log('Erro ao se conectar ao MongoDB: ' + err)
+  }).catch((err) => {
+    console.log('Erro ao se conectar: ' + err)
   })
 // Public
   app.use(express.static(path.join(__dirname, 'public')))
