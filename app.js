@@ -7,6 +7,7 @@ const app = express();
 const admin = require('./routes/admin');
 const path = require('path');
 const session = require('express-session');
+const MongoStore = require('connect-mongo')
 const flash = require('connect-flash');
 require('./models/Postagem');
 const Postagem = mongoose.model('postagens');
@@ -19,11 +20,14 @@ const db = require('./config/db');
 
 //CONFIGURACOES
 // Sessão
-  app.use(session({
+app.use(
+  session({
     secret: 'cursodenode',
     resave: true,
-    saveUninitialized: true
-  }))
+    saveUninitialized: true,
+    store: MongoStore.create({ mongoUrl: db.mongoURI }),
+  })
+)
   app.use(passport.initialize())
   app.use(passport.session())
   app.use(flash())
