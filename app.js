@@ -119,7 +119,7 @@ app.get('/404', (req,res)=>{
 app.use('/admin', admin)
 app.use('/usuarios', usuarios)
 //OUTROS
-const port = process.env.port || 8081
+const port = process.env.port || 3000
 app.listen(port,()=>{
 console.log('Servidor rodando!')
 })
