@@ -19,6 +19,7 @@ require('./config/auth')(passport);
 const db = require('./config/db');
 
 //CONFIGURACOES
+
 // Sessão
 app.use(
   session({
